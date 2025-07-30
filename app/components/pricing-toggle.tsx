@@ -27,18 +27,26 @@ export default function PricingToggle({ isYearly, onToggle }: PricingToggleProps
             <motion.div
               layoutId="pricing-toggle"
               className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl shadow-lg"
-              transition={{
-                type: "spring",
-                stiffness: 300,
-                damping: 30,
-                duration: 0.6,
-              }}
               animate={{
                 boxShadow: [
                   "0 4px 20px rgba(59, 130, 246, 0.3)",
                   "0 8px 30px rgba(59, 130, 246, 0.4)",
                   "0 4px 20px rgba(59, 130, 246, 0.3)",
                 ],
+              }}
+              transition={{
+                boxShadow: {
+                  type: "tween",
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                },
+                default: {
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 30,
+                  duration: 0.6,
+                },
               }}
             />
           )}
@@ -57,18 +65,26 @@ export default function PricingToggle({ isYearly, onToggle }: PricingToggleProps
             <motion.div
               layoutId="pricing-toggle"
               className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl shadow-lg"
-              transition={{
-                type: "spring",
-                stiffness: 300,
-                damping: 30,
-                duration: 0.6,
-              }}
               animate={{
                 boxShadow: [
                   "0 4px 20px rgba(59, 130, 246, 0.3)",
                   "0 8px 30px rgba(59, 130, 246, 0.4)",
                   "0 4px 20px rgba(59, 130, 246, 0.3)",
                 ],
+              }}
+              transition={{
+                boxShadow: {
+                  type: "tween",
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                },
+                default: {
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 30,
+                  duration: 0.6,
+                },
               }}
             />
           )}
