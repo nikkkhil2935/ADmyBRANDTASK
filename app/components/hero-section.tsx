@@ -8,10 +8,10 @@ import { Loader2 } from "lucide-react"
 
 function SplineLoader() {
   return (
-    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl">
+    <div className="absolute inset-0 flex items-center justify-center bg-transparent">
       <div className="text-center">
-        <Loader2 className="h-8 w-8 animate-spin text-white mx-auto mb-4" />
-        <p className="text-white/70 text-sm">Loading 3D Scene...</p>
+        <Loader2 className="h-8 w-8 animate-spin text-slate-600 mx-auto mb-4" />
+        <p className="text-slate-600/70 text-sm">Loading 3D Scene...</p>
       </div>
     </div>
   )
@@ -106,14 +106,14 @@ export default function HeroSection() {
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
             className="relative"
           >
-            <div className="relative w-full h-[500px] rounded-3xl overflow-hidden">
+            <div className="relative w-full h-[500px]">
   <Suspense fallback={<SplineLoader />}>
     <Spline
       scene="https://prod.spline.design/IX4xjvsoLB1UO8oS/scene.splinecode"
-      className="w-full h-full"
+      className="w-full h-full [&>canvas]:!bg-transparent"
       style={{
         background: "transparent",
-        backgroundColor: "transparent"
+        backgroundColor: "transparent",
       }}
     />
   </Suspense>
